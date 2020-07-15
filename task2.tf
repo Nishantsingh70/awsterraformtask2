@@ -136,9 +136,7 @@ resource "aws_s3_bucket_object"  "mytask2bucket_object"  {
           source  =  "awsterraformtask2/img.jpg"
           acl  =  "public-read"
    }
-output "Image"{
-   value = "aws_s3_bucket_object.git_down"
-}
+
 resource "aws_cloudfront_distribution" "mytask2cloudfront" {
         origin {
                 domain_name = "mybucket.s3.amazonaws.com"
